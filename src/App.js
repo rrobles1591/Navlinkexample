@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter, Route, NavLink } from "react-router-dom";
+import Navbar from './Navbar';
 import './App.css';
+
+import Pikachu from './Pikachu';
+import Cleffa from './Cleffa';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <BrowserRouter>
+      < Navbar />
+      <Route exact path="/">
+        < Pikachu />
+      </Route>
+      <Route exact path="/cleffa">
+        < Cleffa />
+      </Route>
+      </BrowserRouter>
+    </main>
   );
 }
+
 
 export default App;

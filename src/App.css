@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.App nav a {
+  margin: 20px;
+}
+
+.App nav a.active {
+  color:black;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
